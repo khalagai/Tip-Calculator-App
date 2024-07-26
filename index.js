@@ -72,9 +72,9 @@
     }
 
     const updateTip = (tipPercentage) => {
-      bill = billValue;
+      bill = billValue;      
       tip = (tipPercentage * bill) / 100;
-      total = tip * peopleValue;
+      total = tip + bill;
       totalTip.innerText = `$${total.toFixed(2)}`;
       tipAmount.innerText = `$${tip.toFixed(2)}`;  
     }
