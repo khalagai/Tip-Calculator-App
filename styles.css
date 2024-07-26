@@ -1,0 +1,255 @@
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+#bill-required, #people-required {
+    font-weight: 700;
+    color: red;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "Space Mono";
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color:  hsl(185, 41%, 84%);
+    width: 75%;
+    box-shadow: 5px 5px 6px 5px rgba(0,0,0,0.2);
+    min-height: 100vh;
+    min-width: 16rem;
+}
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;    
+}
+.header img {
+    height: 2.5rem;
+}
+#dollar {
+    height: 1rem;
+    width: 1rem;
+    position: relative;
+    top: -34%;
+    left: 5%;
+}
+.card {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 0.5rem; 
+    gap: 1rem;
+    padding: 0 1rem 1rem 1rem;
+    font-size: 0.7rem;
+    font-weight: 700;  
+    color: hsl(183, 100%, 15%); 
+    min-width: 13rem;
+    box-shadow: 5px 5px 6px 5px rgba(0,0,0,0.2);
+}
+
+.bill-tip {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 0.5rem;
+}
+.one, .two, .three,.four, .five, .six {
+    display: flex;  
+    align-items: center;  
+    justify-content: center;
+}
+.tip {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row: 1;
+    display: flex;
+    align-items: end;
+}
+.one {
+    grid-column: 1;
+    grid-row: 2;
+}
+.two {
+    grid-column: 2;
+    grid-row: 2;
+}
+.three {
+    grid-column: 1;
+    grid-row: 3;
+}
+.four {
+    grid-column: 2;
+    grid-row: 3;
+}
+.five {
+    grid-column: 1;
+    grid-row: 4;
+}
+.six {
+    grid-column: 2;
+    grid-row: 4;
+}
+.six input {
+    width: 100%;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+button {
+    width: 100%;
+    height: 100%;
+    font-size: 1rem;
+    font-weight: 700;
+    font-family: "Space Mono";
+    border-radius: 0.3rem;
+    background-color: hsl(183, 100%, 15%);
+    border: none;
+    color: hsl(0, 0%, 100%);
+    cursor: pointer;
+}
+button:focus {
+    background-color: hsl(172, 67%, 45%);
+}
+.people {
+    display: flex;
+    flex-direction: column;
+    padding-top: 1rem;
+}
+.people input {
+    height: 2rem;
+    text-align: end;
+    font-size: 1.5rem;
+    padding-right: 0.5rem;
+}
+input[type=text] {
+    font-family: "space mono";
+    cursor: pointer;
+    border-radius: 0.3rem;
+    background-color: hsl(189, 41%, 97%);
+    box-shadow: 5px 5px 6px 5px rgba(0,0,0,0.2);
+    border: none;
+    font-size: 1rem;
+    font-weight: 700;
+}
+input[type=text]:hover {
+    border: 1.5px solid hsl(172, 67%, 45%);
+}
+input[type=text]:focus {
+    border: 1.5px solid hsl(172, 67%, 45%);
+    outline: none;
+}
+#person {
+    height: 1rem;
+    width: 1rem;
+    position: relative;
+    top: -35%;
+    left: 5%;
+}
+.totals {
+    display: flex;
+    flex-direction: column;
+    padding: 0 1rem;
+    border-radius: 0.6rem;
+    background-color: hsl(183, 100%, 15%);
+    color: hsl(172, 67%, 45%);
+    padding-bottom: 1rem;
+}
+.cash-tip {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+span {color: hsl(0, 0%, 100%);}
+.reset button{
+    background-color: hsl(172, 67%, 45%);
+    height: 2.5rem;
+    text-transform: uppercase;
+    color: hsl(183, 100%, 15%);
+}
+#tipOne, #tipTotal {
+    font-size: 1.2rem;
+}
+
+@media (min-width: 600px) {
+    .container {
+        width: 100%;       
+    }
+    .card {
+        grid-template-columns: 1fr 1fr;
+        padding-top: 1rem;
+        width: 80%;
+        max-width: 50rem;
+    }
+    .first {
+        grid-column: 1;
+        grid-column: 1;
+    }
+    .bill-tip {
+        grid-column: 1;
+        grid-row: 2;
+    }
+    .second {
+        grid-column: 1;
+        grid-row: 3;
+    }
+    .totals {
+        grid-column: 2;
+        grid-row-start: 1;
+        grid-row-end: 4;
+        padding-top: 1.5rem ;
+    }
+    .bill-tip {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3 ,1fr);
+    }
+    .tip {
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-row: 1;
+    }
+    .one {
+        grid-column: 1;
+        grid-row: 2;
+    }
+    .two {
+        grid-column: 2;
+        grid-row: 2;
+    }
+    .three {
+        grid-column: 3;
+        grid-row: 2;
+    }
+    .four {
+        grid-column: 1;
+        grid-row: 3;
+    }
+    .five {
+        grid-column: 2;
+        grid-row: 3;
+    }
+    .six {
+        grid-column: 3;
+        grid-row: 3;
+    }
+    .reset {
+        padding-top: 5rem;
+    }
+    .header {
+        padding-top: 0;
+    }
+    .reset button {
+        background-color: hsl(186, 14%, 43%);
+    }
+    .reset button:hover {
+        background-color: hsl(172, 67%, 45%);
+    }
+    .reset button:focus {
+        background-color: hsl(172, 67%, 45%);
+    }
+}
