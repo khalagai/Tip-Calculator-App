@@ -11,6 +11,7 @@
     let bill = 0;
     let tip = 0;
     let total = 0;
+    let tipPerson = 0;
         
     const calculateTip = (tipPercentage) => {
       if(!validateInput()) {
@@ -74,8 +75,9 @@
     const updateTip = (tipPercentage) => {
       bill = billValue;      
       tip = (tipPercentage * bill) / 100;
+      tipPerson = tip / peopleValue;
       total = tip + bill;
       totalTip.innerText = `$${total.toFixed(2)}`;
-      tipAmount.innerText = `$${tip.toFixed(2)}`;  
+      tipAmount.innerText = `$${tipPerson.toFixed(2)}`;  
     }
     
